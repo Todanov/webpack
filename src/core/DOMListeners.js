@@ -14,10 +14,8 @@ export class DOMListeners{
             if(!this[onMethod]){
                 throw  new Error(`Not fount metohod ${onMethod} in component ${this.name}`)
             }
-            console.log(this)
             this[onMethod] =this[onMethod].bind(this)
-            $.on(this.selector, listener, this[onMethod])
-        
+            this.selector.addEventListener(listener, this[onMethod])
         })
     }
 

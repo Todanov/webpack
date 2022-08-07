@@ -14,8 +14,16 @@ $.create = (tagName , classes='') => {
 
 $.on = (tagName, method, cb)=>{
     tagName.addEventListener(method, cb)
+    return tagName
 }
 
 $.on = (tagName, method, cb)=>{
     tagName.removeEventListener(method, cb)
+}
+$.css =(tagName,styles ={}) => {
+    Object.keys(styles).forEach(key => {
+        tagName.style[key] = styles[key]
+       
+    })
+
 }
