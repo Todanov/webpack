@@ -2,6 +2,13 @@ import { ExcelComponents } from "../../core/ExcelComponent";
 
 export class Toolbar extends ExcelComponents{
     static className = 'excel__toolbar'
+      constructor(selector, options){
+        super(selector,{
+          name: 'Toolbar',
+          ...options
+        }
+        )
+      }
     toHTML(){
         return `
         <div class="button">

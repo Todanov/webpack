@@ -27,3 +27,11 @@ $.css =(tagName,styles ={}) => {
     })
 
 }
+
+$.id =(id)=>{
+    const pasrsed = id.split(":")
+    return {
+        row: +pasrsed[0],
+        col: +pasrsed[1]
+    }
+}

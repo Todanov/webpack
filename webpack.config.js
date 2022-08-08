@@ -13,6 +13,7 @@ console.log(isDev)
 const filname = ext => isDev ? `bundel.${ext}` : `bundel.[hash].${ext}`
 
 module.exports ={
+ 
     context: path.resolve(__dirname, "src"),
     mode: "development",
     entry:'./index.js',
